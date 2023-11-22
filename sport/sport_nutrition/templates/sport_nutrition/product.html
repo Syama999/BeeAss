@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/product/product.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'SportPit-master/./assets/img/favicon.svg'%}" type="image/x-icon">
+
+    <title>Продукт</title>
+</head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+
+        <div class="product">
+            <div class="product-photo">
+                <img src="{{ product.image.url }}" alt="product photo">
+            </div>
+
+<!--          #  <div class="product-slider">-->
+<!--                <i class="fas fa-chevron-down"></i>-->
+<!--                <div class="slider-container">-->
+<!--                    <div class="product-slider-line">-->
+<!--                        <div class="product-slider__item product-slider__item-active">-->
+<!--                            <img src="assets/img/product/product-photo1.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo2.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo3.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo4.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo5.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo4.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo4.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo4.webp" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="product-slider__item">-->
+<!--                            <img src="assets/img/product/product-photo4.webp" alt="">-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <i class="fas fa-chevron-down"></i>-->
+<!--            </div> &ndash;&gt;-->
+
+            <div class="product-description">
+                <h3>{{product.title}}</span></h3>
+                <p>{{product.description}}.</p>
+                <p>{{product.price}}. </span>₽</p>
+            </div>
+
+            <div class="choose-volume">
+                <h3>Выберите объём:</h3>
+                <form class="volume-variants">
+                    <button type="button">250г</button>
+                    <button type="button">500г</button>
+                    <button type="button">750г</button>
+                    <button type="button">1кг</button>
+                    <button>В корзину</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="reviews-container">
+            <h3>Отзывы:</h3>
+            <div class="reviews">
+                <div class="reviews-item">
+                    <p class="reviews-item__name">Наполеон Бонапарт</p>
+                    <p class="reviews-item__grade"><span></span>/10</p>
+                    <p class="reviews-item__text">Нормально так штырит, хотел взять Москву, но она сгорела чет :(</p>
+                </div>
+                <div class="reviews-item">
+                    <p class="reviews-item__name">Миша Кутузов</p>
+                    <p class="reviews-item__grade"><span></span>/10</p>
+                    <p class="reviews-item__text">Идеально, чтобы уничтожать французов.</p>
+                </div>
+            </div>
+        </div>
+        <div class="leave-feedback">
+            <h3>Оставить отзыв:</h3>
+            <form class="leave-feedback__form">
+                <input class="" type="number" name="" id="" placeholder="Оценка товара">
+                <textarea name="" id="" cols="10" rows="10" placeholder="Комментарий"></textarea>
+                <button type="button">Отправить</button>
+            </form>
+            <div class="leave-feedback__completed">
+                <p>Благодарим за отзыв!</p>
+            </div>
+        </div>
+    </main>
+
+
+    {% include 'inc/_footer.html' %}
+    <p id="signature">Designed & Created by Brahma</p>
+
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/product/selectVolume.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/product/slider.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/product/setTitle.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/product/randomGrade.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/product/addReview.js'%}"></script>
+</body>
+
+</html>

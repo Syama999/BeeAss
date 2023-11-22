@@ -1,0 +1,151 @@
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+main h3 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+}
+
+.faq-item:first-child {
+    margin-top: 40px;
+}
+
+.faq-item {
+    margin-top: 20px;
+}
+
+.faq-question,
+.faq-answer {
+    font-size: 22px;
+    padding: 7px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    background: #E5E5E5;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.70);
+    font-weight: 500;
+    width: 860px;
+}
+
+.faq-question {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+
+    transition: .3s ease border-radius;
+}
+
+.faq-question i {
+    position: absolute;
+    left: 95%;
+
+    transition: .3s ease transform;
+}
+
+.faq-question-icon__answer-visible {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    border-radius: 0 0 5px 5px;
+    margin-top: -2px;
+}
+
+.faq-answer__hidden {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.faq-question__faq-answer-visible {
+    border-radius: 5px 5px 0 0;
+}
+
+.problem-form {
+    display: flex;
+    flex-direction: column;
+    width: 860px;
+    margin-top: 30px;
+}
+
+.problem-form input,
+.problem-form textarea,
+.problem-form button,
+.problem-form label {
+    padding: 5px 20px;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    background: #E5E5E5;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.70);
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    outline: none;
+}
+
+.problem-form textarea {
+    border-top: none;
+    resize: none;
+}
+
+.problem-form input {
+    border-radius: 5px 5px 0 0;
+}
+
+.problem-form input,
+.problem-form textarea {
+    transition: .3s ease box-shadow,
+        .3s ease background-color;
+}
+
+.problem-form input::placeholder,
+.problem-form textarea::placeholder {
+    transition: .3s ease transform;
+}
+
+.problem-form input:focus::placeholder,
+.problem-form textarea:focus::placeholder {
+    transform: translateY(-120%)
+}
+
+.problem-form input:hover,
+.problem-form textarea:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.problem-form-buttons {
+    margin-top: 20px;
+}
+
+.problem-form-buttons button,
+.problem-form label {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease background-color,
+        .3s ease box-shadow,
+        .3s ease transform;
+}
+
+.problem-form-buttons button:hover,
+.problem-form-buttons label:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+#img-input {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+footer {
+    margin-top: 100px;
+}

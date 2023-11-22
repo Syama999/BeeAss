@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font Awesome 5 -->
+        <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+        <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Orbitron  --> <!-- Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/basket/basket.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+        <title>Корзина</title>
+    </head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <div class="items">
+            <div class="item">
+                <img src="{% static 'SportPit-master/assets/img/basket/geiner.png'%}" alt="product photo">
+                <div>
+                    <p class="item-name"><span class="item-product-name">Гейнер</span><br><span class="item-brand-name">MUTANT</span></p>
+                    <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis. Описание товара...</p>
+                    <div class="item-buttons">
+                        <div class="item-counter">
+                            <i class="fas fa-minus"></i>
+                            <input class="counter-text" type="number" name="" id="" value="1">
+                            <i class="fas fa-plus"></i>
+                            <p class="item-total-price">Цена: <span class="item-price">1300</span>₽</p>
+                        </div>
+                        <div class="item-options">
+                            <i class="fas fa-save"></i>
+                            <i class="fas fa-cart-arrow-down"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/basket/counters.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/basket/itemButtons.js'%}"></script>
+</body>
+
+</html>

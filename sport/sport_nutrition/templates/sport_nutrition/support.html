@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/support/support.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'SportPit-master/./assets/img/favicon.svg'%}" type="image/x-icon">
+
+    <title>Продукт</title>
+</head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <h3>Прежде, чем задать вопрос - убедитесь, что его нет в списке ниже:</h3>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <p>Почему я нажимаю, а оно не работает?</p> <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer faq-answer__hidden">
+                    <p>Попробуйте нажимать сильнее, или нажимайте мышью</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <p>Не могу войти в профиль</p> <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer faq-answer__hidden">
+                    <p>Чтобы войти в профиль надо нажать кнопку “Войти” сверху, а потом ввести
+                        логин и пароль. Если у вас нет аккаунта, надо его создать нажав
+                        кнопку “Регистрация”</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <p>Что-то еще</p> <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="faq-answer faq-answer__hidden">
+                    <p>Сами разбирайтесь, мы вообще хз</p>
+                </div>
+            </div>
+        </div>
+        <h3>Не нашли свою проблему? Напишите нам! Опишите её и мы дадим ответ!</h3>
+        <form class="problem-form">
+            <input type="text" placeholder="Тема (обязательно)">
+            <textarea placeholder="Опишите свою проблему" id="" cols="30" rows="10"></textarea>
+            <div class="problem-form-buttons">
+                <input type="file" name="" id="img-input">
+                <label for="img-input">Прикрепить изображение</label>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </main>
+
+    {% include 'inc/_footer.html' %}
+
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/support/openQuestions.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/support/attachFileName.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/support/validateForm.js'%}"></script>
+</body>
+
+</html>

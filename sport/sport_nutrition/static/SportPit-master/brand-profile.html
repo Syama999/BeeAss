@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Font Awesome 5 -->
+        <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+    
+        <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+    
+        <!-- Orbitron  --> <!-- Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/brand-profile/brand-profile.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+    
+        <title>Профиль бренда</title>
+    </head>
+    
+    <body>
+        <header id="header">
+            <div class="header-logo">
+                <p class="header-logo__text">SportPit <span id="header-logo__icon"><i class="fas fa-bicycle"></i></span></p>
+                <p class="header-logo__site-description">Интернет-магазин<br> спортивного питания</p>
+            </div>
+            <div class="header-menu">
+                <form action="" class="header-menu__search">
+                    <input type="text" name="" id="header-menu__search" placeholder="Поиск...">
+                </form>
+                <ul>
+                    <li class="header-menu__item"><a href="#">Войти</a></li>
+                    <li class="header-menu__item"><a href="/favorite.html">Избранное</a></li>
+                    <li class="header-menu__item"><a href="/brands.html">Бренды</a></li>
+                    <li class="header-menu__item"><a href="">Каталог</a></li>
+                    <li class="header-menu__item"><a href="">Корзина</a></li>
+                    <li class="header-menu__item"><a href="">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="header-menu-mobile">
+                <ul>
+                    <li class="header-menu__item"><a href="#">Войти</a></li>
+                    <li class="header-menu__item"><a href="/favorite.html">Избранное</a></li>
+                    <li class="header-menu__item"><a href="/brands.html">Бренды</a></li>
+                    <li class="header-menu__item"><a href="">Каталог</a></li>
+                    <li class="header-menu__item"><a href="">Корзина</a></li>
+                    <li class="header-menu__item"><a href="">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="header-menu-mobile__icon">
+                <div class="header-menu-mobile__icon-item"></div>
+                <div class="header-menu-mobile__icon-item"></div>
+                <div class="header-menu-mobile__icon-item"></div>
+            </div>
+    
+            <div class="login">
+                <i class="fas fa-times"></i>
+                <form action="">
+                    <h2>Вход</h2>
+                    <input type="text" name="" id="" placeholder="Ведите логин">
+                    <input type="password" name="" id="" placeholder="Введите пароль">
+                    <div class="login-form__checkbox">
+                        <input type="checkbox" name="" id="remember-me__checkbox">
+                        <label for="remember-me__checkbox">Запомнить меня</label>
+                    </div>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="/brand-profile.html">Войти как бренд</a>
+                    <button>Войти</button>
+                </form>
+            </div>
+    
+            <a href="#header" class="scroll-to-top__button"><i class="fas fa-chevron-up"></i></a>
+        </header>
+
+        <main>
+            <div class="brand-info">
+                <div class="brand-avatar">
+                    <img src="/assets/img/brand-profile/brand-mutant.png" alt="">
+                    <button>Сменить фото</button>
+                </div>
+                <div class="brand-description">
+                    <h1>MUTANT</h1>
+                    <p>Описание бренда Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis. 
+                         (макс 200 символов)</p>
+                </div>
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="add-product">
+                <h3>Добавить товар:</h3>
+                <form class="add-product__form" action="">
+                    <div class="product-general-info">
+                        <input class="product-general-info__name" type="text" placeholder="Название товара">
+                        <input class="product-general-info__price" type="text" placeholder="Цена">
+                        <input type="file" id="file-input"/>
+                        <label for="file-input" id="file-input__label">Фото не выбрано</label>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Описание товара"></textarea>
+                </form>
+            </div>
+            <div class="product-preview">
+                <h3>Предпросмотр:</h3>
+                <div class="items__container">
+                    <div class="item">
+                        <img src="assets/img/brand-profile/products/Mega Amino.png" alt="">
+                        <div class="item-info">
+                            <p>Mega Amino<br>MUTANT</p>
+                            <p><span>1500</span>₽</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="product-preview__buttons" action="">
+                    <button>Сохранить</button>
+                    <button>Опубликовать</button>
+                </form>
+            </div>
+
+            <div class="saved-items">
+                <h3>Сохраненные товары:</h3>
+                <div class="items__container">
+                    <div class="item">
+                        <img src="assets/img/brand-profile/products/Mega Amino.png" alt="">
+                        <div class="item-info">
+                            <p>Mega Amino<br>MUTANT</p>
+                            <p><span>1500</span>₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-menu">
+                <div class="footer-menu__item">
+                    <ul>
+                        <p>Контакты:</p>
+                        <li>8 (989) 182-14-27</li>
+                        <li>г.Йошкар-Ола<br>ул.Дзержинская 18</li>
+                        <li>info@sportpit.net</li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <ul>
+                        <p>Компания:</p>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Отзывы</a></li>
+                        <li><a href="">Сатьи</a></li>
+                        <li><a href="">Магазины</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <ul>
+                        <p>Покупателям:</p>
+                        <li><a href="">Доставка</a></li>
+                        <li><a href="">Оплата</a></li>
+                        <li><a href="">Обратная связь</a></li>
+                        <li><a href="">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu__item">
+                    <ul>
+                        <p>Сотрудничество:</p>
+                        <li><a href="">Брендам</a></li>
+                        <li><a href="">Поставщикам</a></li>
+                        <li><a href="">Реклама</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <p id="signature">Designed & Created by Brahma</p>
+    
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/brand-profile/previewProduct.js"></script>
+</body>
+</html>

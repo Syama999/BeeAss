@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/index/index.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+    <title>Главная</title>
+</head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <div class="site-info">
+            <div class="site-info__item">
+                <p>
+                    Наш магазин работает уже более 150 лет. Со времен правления
+                    Наполеона во всем мире. Он славится тем, что продает спортивное
+                    питания нуждающимся детям в Африке по низким ценам.
+                    Ознакомиться со всеми нашими товарами вы можете по кнопке ниже.
+                    И вообще мы
+                    лучшие в своём деле.
+                </p>
+                <a href="{% url 'catalog'%}">Каталог товаров</a>
+            </div>
+            <div class="site-info__item">
+                <p>
+                    На нашем сайте собраны межгалактические бренды спортивного питания.
+                    Они поставляют товары, которми пользуются в том числе и иные рассы
+                    разумной жизни, место обитания которых ученые ещё даже не нашли.
+                </p>
+                <a href="{% url 'brands'%}">Бренды</a>
+            </div>
+            <div class="site-info__item">
+                <p>
+                    Если у вас есть какие-нибудь вопросы, а так же если бы вы хотели обратиться по деловому предложению, напишите в поддержку.
+                </p>
+                <a href="{% url 'support'%}">Поддержка</a>
+            </div>
+        </div>
+
+        <div class="recomendation">
+            <h2>Рекомендуем ознакомиться:</h2>
+            <div class="recomendation__item">
+                <div class="recomendation__item-img">
+                    <img src="{% static 'SportPit-master/assets/img/index/proteine.png'%}" alt="Proteine Whey">
+                </div>
+                <div class="recomendation__item-description">
+                    <p>Протеин<br><span id="recomendation__item-product-name">WHEY</span></p>
+                    <p>Проверенный временем протеин, рекомендуется к покупке.</p>
+                    <a href="product/protein-optimum-nutrition">Купить за 2499₽</a>
+                </div>
+            </div>
+            <div class="recomendation__item">
+                <div class="recomendation__item-description">
+                    <p>Креатин<br><span id="recomendation__item-product-name">BioTech</span></p>
+                    <p>Креатин известен своей реальной пользой, прогресс будет неизбежен.</p>
+                    <a href="product/kreatin-biotech">Купить за 1200₽</a>
+                </div>
+                <div class="recomendation__item-img">
+                    <img src="{% static 'SportPit-master/assets/img/index/creatine.png'%}" alt="Creatine BioTech">
+                </div>
+            </div>
+            <div class="recomendation__item">
+                <div class="recomendation__item-img">
+                    <img src="{% static 'SportPit-master/assets/img/index/geiner.png'%}" alt="Geiner Mutant">
+                </div>
+
+                <div class="recomendation__item-description">
+                    <p>Гейнер<br><span id="recomendation__item-product-name">MUTANT</span></p>
+                    <p>Этот продукт подойдет тем, кто хочет набрать массы за небольшую цену.</p>
+                    <a href="product/gejner-skills">Купить за 999₽</a>
+
+                </div>
+            </div>
+        </div>
+
+       <!-- <div class="consultation">
+            <h2>Также вы можете заказать у нас <span id="consultation-header__red-item">бесплатную</span> консультацию!</h2>
+            <p>Мы обязательно с вами свяжемся!</p>
+            <form action="" class="consultation__form">
+                <input type="text" name="" id="" placeholder="Как к вам обращаться?">
+                <input type="tel" name="" id="" placeholder="Ваш номер телефона">
+                <button>Отправить</button>
+            </form>
+        </div>-->
+    </main>
+    {% include 'inc/_footer.html' %}
+    <p id="signature">Designed & Created by Brahma</p>
+
+    <script src="{% static 'SportPit-master/assets/js/index/onLoadAnimationElements.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/index/scrollAnimationElements.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+</body>
+
+</html>

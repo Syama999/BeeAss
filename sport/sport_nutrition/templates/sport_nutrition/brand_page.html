@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/brand-page/brand-page.css' %}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css' %}">
+
+    <title>Главная</title>
+</head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <div class="brand-info">
+            <div>
+                <img src="{% static 'SportPit-master/assets/img/brand-page/brand-fitness-heroes.png' %}" alt="Fitness Heroes">
+                <h2>Fitness Heroes</h2>
+            </div>
+            <div class="brand-description">
+                <p>Описание бренда Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+        <div class="products-of-brand">
+            <h2>Товары:</h2>
+            <div class="products-container">
+                <div class="product">
+                    <img src="{% static 'SportPit-master/assets/img/brand-page/products/Mega Amino.png' %}" alt="Гейнер MUTANT">
+                    <div class="product-info">
+                        <p>Mega Amino</p>
+                        <p><span>1500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="{% static 'SportPit-master/assets/img/brand-page/products/BCAA.png' %}" alt="Протеин WHEY">
+                    <div class="product-info">
+                        <p>BCAA</p>
+                        <p><span>3500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="{% static 'SportPit-master/assets/img/brand-page/products/Cafeine & Taurine.png' %}" alt="Креатин BioTech">
+                    <div class="product-info">
+                        <p>Cafeine & Taurine</p>
+                        <p><span>2500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'inc/_footer.html' %}
+    <p id="signature">Designed & Created by Brahma</p>
+
+    <script src="{% static 'SportPit-master/assets/js/main.js' %}"></script>
+</body>
+
+</html>

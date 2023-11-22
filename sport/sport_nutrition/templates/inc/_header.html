@@ -1,0 +1,52 @@
+<header id="header">
+        <div class="header-logo">
+            <p class="header-logo__text">SportPit <span id="header-logo__icon"><i class="fas fa-bicycle"></i></span></p>
+            <p class="header-logo__site-description">Интернет-магазин<br> спортивного питания</p>
+        </div>
+        <div class="header-menu">
+            <form action="" class="header-menu__search">
+                <input type="text" name="" id="header-menu__search" placeholder="Поиск...">
+            </form>
+            <ul>
+                <li class="header-menu__item"><a href="#">Войти</a></li>
+                <li class="header-menu__item"><a href="{% url 'favorite'%}">Избранное</a></li>
+                <li class="header-menu__item"><a href="{% url 'brands'%}">Бренды</a></li>
+                <li class="header-menu__item"><a href="{% url 'catalog'%}">Каталог</a></li>
+                <li class="header-menu__item"><a href="{% url 'basket'%}">Корзина</a></li>
+                <li class="header-menu__item"><a href="{% url 'support'%}">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile">
+            <ul>
+                <li class="header-menu__item"><a href="#">Войти</a></li>
+                <li class="header-menu__item"><a href="{% url 'favorite'%}">Избранное</a></li>
+                <li class="header-menu__item"><a href="{% url 'brands'%}">Бренды</a></li>
+                <li class="header-menu__item"><a href="{% url 'catalog'%}">Каталог</a></li>
+                <li class="header-menu__item"><a href="{% url 'basket'%}">Корзина</a></li>
+                <li class="header-menu__item"><a href="{% url 'support'%}">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile__icon">
+            <div class="header-menu-mobile__icon-item"></div>
+            <div class="header-menu-mobile__icon-item"></div>
+            <div class="header-menu-mobile__icon-item"></div>
+        </div>
+
+        <div class="login">
+            <i class="fas fa-times"></i>
+            <form action="">
+                <h2>Вход</h2>
+                <input type="text" name="" id="" placeholder="Ведите логин">
+                <input type="password" name="" id="" placeholder="Введите пароль">
+                <div class="login-form__checkbox">
+                    <input type="checkbox" name="" id="remember-me__checkbox">
+                    <label for="remember-me__checkbox">Запомнить меня</label>
+                </div>
+                <a href="#">Забыли пароль?</a>
+                <a href="{% url 'brand_profile' %}">Войти как бренд</a>
+                <button>Войти</button>
+            </form>
+        </div>
+
+        <a href="#header" class="scroll-to-top__button"><i class="fas fa-chevron-up"></i></a>
+    </header>

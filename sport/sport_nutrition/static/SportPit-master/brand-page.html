@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/brand-page/brand-page.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <title>Главная</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-logo">
+            <p class="header-logo__text">SportPit <span id="header-logo__icon"><i class="fas fa-bicycle"></i></span></p>
+            <p class="header-logo__site-description">Интернет-магазин<br> спортивного питания</p>
+        </div>
+        <div class="header-menu">
+            <form action="" class="header-menu__search">
+                <input type="text" name="" id="header-menu__search" placeholder="Поиск...">
+            </form>
+            <ul>
+                <li class="header-menu__product"><a href="#">Войти</a></li>
+                <li class="header-menu__product"><a href="/favorite.html">Избранное</a></li>
+                <li class="header-menu__product"><a href="/brands.html">Бренды</a></li>
+                <li class="header-menu__product"><a href="">Каталог</a></li>
+                <li class="header-menu__product"><a href="">Корзина</a></li>
+                <li class="header-menu__product"><a href="">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile">
+            <ul>
+                <li class="header-menu__product"><a href="#">Войти</a></li>
+                <li class="header-menu__product"><a href="/favorite.html">Избранное</a></li>
+                <li class="header-menu__product"><a href="/brands.html">Бренды</a></li>
+                <li class="header-menu__product"><a href="">Каталог</a></li>
+                <li class="header-menu__product"><a href="">Корзина</a></li>
+                <li class="header-menu__product"><a href="">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile__icon">
+            <div class="header-menu-mobile__icon-product"></div>
+            <div class="header-menu-mobile__icon-product"></div>
+            <div class="header-menu-mobile__icon-product"></div>
+        </div>
+
+        <div class="login">
+            <i class="fas fa-times"></i>
+            <form action="">
+                <h2>Вход</h2>
+                <input type="text" name="" id="" placeholder="Ведите логин">
+                <input type="password" name="" id="" placeholder="Введите пароль">
+                <div class="login-form__checkbox">
+                    <input type="checkbox" name="" id="remember-me__checkbox">
+                    <label for="remember-me__checkbox">Запомнить меня</label>
+                </div>
+                <a href="#">Забыли пароль?</a>
+                <a href="/brand-profile.html">Войти как бренд</a>
+                <button>Войти</button>
+            </form>
+        </div>
+
+        <a href="#header" class="scroll-to-top__button"><i class="fas fa-chevron-up"></i></a>
+    </header>
+
+    <main>
+        <div class="brand-info">
+            <div>
+                <img src="assets/img/brand-page/brand-fitness-heroes.png" alt="Fitness Heroes">
+                <h2>Fitness Heroes</h2>
+            </div>
+            <div class="brand-description">
+                <p>Описание бренда Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                    vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+        <div class="products-of-brand">
+            <h2>Товары:</h2>
+            <div class="products-container">
+                <div class="product">
+                    <img src="assets/img/brand-page/products/Mega Amino.png" alt="Гейнер MUTANT">
+                    <div class="product-info">
+                        <p>Mega Amino</p>
+                        <p><span>1500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/brand-page/products/BCAA.png" alt="Протеин WHEY">
+                    <div class="product-info">
+                        <p>BCAA</p>
+                        <p><span>3500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="assets/img/brand-page/products/Cafeine & Taurine.png" alt="Креатин BioTech">
+                    <div class="product-info">
+                        <p>Cafeine & Taurine</p>
+                        <p><span>2500</span>₽</p>
+                    </div>
+                    <button class="product__buy-button">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <div class="footer-menu__item">
+                <ul>
+                    <p>Контакты:</p>
+                    <li>8 (989) 182-14-27</li>
+                    <li>г.Йошкар-Ола<br>ул.Дзержинская 18</li>
+                    <li>info@sportpit.net</li>
+                </ul>
+            </div>
+            <div class="footer-menu__item">
+                <ul>
+                    <p>Компания:</p>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Сатьи</a></li>
+                    <li><a href="">Магазины</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu__item">
+                <ul>
+                    <p>Покупателям:</p>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Обратная связь</a></li>
+                    <li><a href="">Возврат товара</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu__item">
+                <ul>
+                    <p>Сотрудничество:</p>
+                    <li><a href="">Брендам</a></li>
+                    <li><a href="">Поставщикам</a></li>
+                    <li><a href="">Реклама</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <p id="signature">Designed & Created by Brahma</p>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

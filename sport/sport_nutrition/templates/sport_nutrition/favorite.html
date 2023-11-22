@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/favorite/favorite.css'%}">
+
+    <title>Избранное</title>
+</head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <div class="items__container">
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="{% static 'SportPit-master/assets/img/index/geiner.png'%}" alt="Гейнер MUTANT">
+                <div class="item-info">
+                    <p>Гейнер<br><span>MUTANT</span></p>
+                    <p><span>13</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="{% static 'SportPit-master/assets/img/index/proteine.png'%}" alt="Протеин WHEY">
+                <div class="item-info">
+                    <p>Протеин<br><span>WHEY</span></p>
+                    <p><span>5000</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="{% static 'SportPit-master/assets/img/index/creatine.png'%}" alt="Креатин BioTech">
+                <div class="item-info">
+                    <p>Креатин<br><span>BioTech</span></p>
+                    <p><span>12000</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="{% static 'SportPit-master/assets/js/favorite/addToCartButton.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/favorite/deleteItem.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+</body>
+
+</html>

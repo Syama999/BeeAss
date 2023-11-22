@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font Awesome 5 -->
+        <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+        <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Orbitron  --> <!-- Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/brand-profile/brand-profile.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+        <title>Профиль бренда</title>
+    </head>
+
+    <body>
+        {% include 'inc/_header.html' %}
+
+        <main>
+            <div class="brand-info">
+                <div class="brand-avatar">
+                    <img src="{% static 'SportPit-master//assets/img/brand-profile/brand-mutant.png'%}" alt="">
+                    <button>Сменить фото</button>
+                </div>
+                <div class="brand-description">
+                    <h1>MUTANT</h1>
+                    <p>Описание бренда Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                         (макс 200 символов)</p>
+                </div>
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="add-product">
+                <h3>Добавить товар:</h3>
+                <form class="add-product__form" action="">
+                    <div class="product-general-info">
+                        <input class="product-general-info__name" type="text" placeholder="Название товара">
+                        <input class="product-general-info__price" type="text" placeholder="Цена">
+                        <input type="file" id="file-input"/>
+                        <label for="file-input" id="file-input__label">Фото не выбрано</label>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Описание товара"></textarea>
+                </form>
+            </div>
+            <div class="product-preview">
+                <h3>Предпросмотр:</h3>
+                <div class="items__container">
+                    <div class="item">
+                        <img src="{% static 'SportPit-master/assets/img/brand-profile/products/Mega Amino.png'%}" alt="">
+                        <div class="item-info">
+                            <p>Mega Amino<br>MUTANT</p>
+                            <p><span>1500</span>₽</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="product-preview__buttons" action="">
+                    <button>Сохранить</button>
+                    <button>Опубликовать</button>
+                </form>
+            </div>
+
+            <div class="saved-items">
+                <h3>Сохраненные товары:</h3>
+                <div class="items__container">
+                    <div class="item">
+                        <img src="{% static 'SportPit-master/assets/img/brand-profile/products/Mega Amino.png'%}" alt="">
+                        <div class="item-info">
+                            <p>Mega Amino<br>MUTANT</p>
+                            <p><span>1500</span>₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include 'inc/_footer.html' %}
+        <p id="signature">Designed & Created by Brahma</p>
+
+        <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+        <script src="{% static 'SportPit-master/assets/js/brand-profile/previewProduct.js'%}"></script>
+</body>
+</html>

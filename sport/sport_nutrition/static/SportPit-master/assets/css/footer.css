@@ -1,0 +1,31 @@
+footer {
+    position: absolute;
+    padding: 40px 140px;
+}
+
+.footer-menu {
+    display: flex;
+    column-gap: 70px;
+}
+
+.footer-menu__item ul li {
+    list-style: none;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-menu__item ul li a{
+    color: black;
+}
+
+.footer-menu__item p {
+    opacity: 50%;
+    font-weight: 500;
+}
+
+#signature {
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+}

@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font Awesome 5 -->
+        <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+        <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Orbitron  --> <!-- Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/header.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/catalog/catalog.css'%}">
+        <link rel="stylesheet" href="{% static 'SportPit-master/assets/css/footer.css'%}">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static 'SportPit-master/./assets/img/favicon.svg'%}" type="image/x-icon">
+
+        <title>Каталог</title>
+    </head>
+
+<body>
+    {% include 'inc/_header.html' %}
+
+    <main>
+        <i class="fas fa-filter"></i>
+        <div class="filters-container">
+            <i class="fas fa-times"></i>
+            <form class="filters">
+                <div class="price-range filters-item">
+                    <h3>Ценовой диапазон</h3>
+                    <div class="price-range-container filters-item-container">
+                        <input type="number" placeholder="0" min="0">
+                        <p>-</p>
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="categories filters-item">
+                    <h3>Категории</h3>
+                    <div class="categories-container filters-item-container">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="" id="protein-mixtures">
+                                <label for="protein-mixtures">Белковые смеси</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="protein">
+                                <label for="protein">Протеин</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="amino-acids">
+                                <label for="amino-acids">Аминокислоты</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="manufacturer filters-item">
+                        <h3>Производитель</h3>
+                        <div class="manufacturer-container filters-item-container">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="" id="manufacturer-mutant">
+                                    <label for="manufacturer-mutant">MUTANT</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="" id="whey">
+                                    <label for="whey">WHEY</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="" id="bio-tech">
+                                    <label for="bio-tech">BioTech</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale filters-item">
+                        <h3>Скидка</h3>
+                        <div class="sale-container filters-item-container">
+                            <ul>
+                                <li>
+                                    <input type="radio" name="sale" id="yes">
+                                    <label for="yes">Да</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="sale" id="no">
+                                    <label for="no">Нет</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="catalog-items">
+            {% for i in creatine %}
+            <div class="catalog-item categorie-item-muscles">
+                <img src="{{ i.image.url }}" alt="">
+                <div class="catalog-item-info">
+                    <p>{{i.title}}</p>
+                    <p><span>{{i.price}}</span>₽</p>
+                </div>
+                <form class="hover-items">
+                    <div class="add-to-cart__button"><a href="{% url 'basket'%}">В корзину</a></div>
+                    <div class="view__button"><a href="{{i.get_absolute_url}}">Просмотр</a></div>
+                </form>
+            </div>
+            {% endfor %}
+            {% for v in geiner %}
+            <div class="catalog-item categorie-item-weight-loss">
+                <img src="{{ v.image.url}}" alt="">
+                <div class="catalog-item-info">
+                    <p>{{ v.title }}</p>
+                    <p><span>{{ v.price }}</span>₽</p>
+                </div>
+                <form class="hover-items">
+                    <div class="add-to-cart__button"><a href="{% url 'basket'%}">В корзину</a></div>
+                    <div class="view__button"><a href="{{v.get_absolute_url}}">Просмотр</a></div>
+                </form>
+            </div>
+            {% endfor %}
+            {% for p in aminokisloty %}
+                <div class="catalog-item categorie-item-weight-gain">
+                    <img src="{{ p.image.url }}" alt="">
+                    <div class="catalog-item-info">
+                        <p>{{ p.title }}</p>
+                        <p><span>{{p.price}}</span>₽</p>
+                    </div>
+                    <form class="hover-items">
+                        <div class="add-to-cart__button"><a href="{% url 'basket'%}">В корзину</a></div>
+                        <div class="view__button"><a href="{{p.get_absolute_url}}">Просмотр</a></div>
+                    </form>
+                </div>
+            {% endfor %}
+            <div class = "catalog-categorie protein">
+                <h3>Протеины:</h3>
+                {% for p in protein %}
+            <div class="catalog-item categorie-item-weight-gain">
+                    <img src="{{ p.image.url }}" alt="">
+                    <div class="catalog-item-info">
+                        <p>{{ p.title }}</p>
+                        <p><span>{{p.price}}</span>₽</p>
+                    </div>
+                    <form class="hover-items">
+                        <div class="add-to-cart__button"><a href="{% url 'basket'%}">В корзину</a></div>
+                        <div class="view__button"><a href="{{p.get_absolute_url}}">Просмотр</a></div>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+            <div class="catalog-categorie muscles">
+                <h3>Креатины:</h3>
+            </div>
+
+            <div class="catalog-categorie weight-loss">
+                <h3>Гейнеры:</h3>
+            </div>
+
+            <div class="catalog-categorie weight-gain">
+                <h3>Аминокислоты:</h3>
+            </div>
+
+
+    </main>
+
+    <script src="{% static 'SportPit-master/assets/js/main.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/catalog/toggleFilters.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/catalog/filters.js'%}"></script>
+    <script src="{% static 'SportPit-master/assets/js/catalog/categories.js'%}"></script>
+</body>
+
+</html>

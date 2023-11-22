@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/8a2fbc0c4d.js" crossorigin="anonymous"></script>
+
+    <!-- Montserrat Alternates --> <!-- Thin 100/Regular 400/Bold 700/Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Orbitron  --> <!-- Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/favorite/favorite.css">
+
+    <title>Избранное</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-logo">
+            <p class="header-logo__text">SportPit <span id="header-logo__icon"><i class="fas fa-bicycle"></i></span></p>
+            <p class="header-logo__site-description">Интернет-магазин<br> спортивного питания</p>
+        </div>
+        <div class="header-menu">
+            <form action="" class="header-menu__search">
+                <input type="text" name="" id="header-menu__search" placeholder="Поиск...">
+            </form>
+            <ul>
+                <li class="header-menu__item"><a href="#">Войти</a></li>
+                <li class="header-menu__item"><a href="/favorite.html">Избранное</a></li>
+                <li class="header-menu__item"><a href="/brands.html">Бренды</a></li>
+                <li class="header-menu__item"><a href="">Каталог</a></li>
+                <li class="header-menu__item"><a href="">Корзина</a></li>
+                <li class="header-menu__item"><a href="">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile">
+            <ul>
+                <li class="header-menu__item"><a href="#">Войти</a></li>
+                <li class="header-menu__item"><a href="/favorite.html">Избранное</a></li>
+                <li class="header-menu__item"><a href="/brands.html">Бренды</a></li>
+                <li class="header-menu__item"><a href="">Каталог</a></li>
+                <li class="header-menu__item"><a href="">Корзина</a></li>
+                <li class="header-menu__item"><a href="">Поддержка</a></li>
+            </ul>
+        </div>
+        <div class="header-menu-mobile__icon">
+            <div class="header-menu-mobile__icon-item"></div>
+            <div class="header-menu-mobile__icon-item"></div>
+            <div class="header-menu-mobile__icon-item"></div>
+        </div>
+
+        <div class="login">
+            <i class="fas fa-times"></i>
+            <form action="">
+                <h2>Вход</h2>
+                <input type="text" name="" id="" placeholder="Ведите логин">
+                <input type="password" name="" id="" placeholder="Введите пароль">
+                <div class="login-form__checkbox">
+                    <input type="checkbox" name="" id="remember-me__checkbox">
+                    <label for="remember-me__checkbox">Запомнить меня</label>
+                </div>
+                <a href="#">Забыли пароль?</a>
+                <a href="/brand-profile.html">Войти как бренд</a>
+                <button>Войти</button>
+            </form>
+        </div>
+
+        <a href="#header" class="scroll-to-top__button"><i class="fas fa-chevron-up"></i></a>
+    </header>
+
+    <main>
+        <div class="items__container">
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/index/geiner.png" alt="Гейнер MUTANT">
+                <div class="item-info">
+                    <p>Гейнер<br><span>MUTANT</span></p>
+                    <p><span>13</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/index/proteine.png" alt="Протеин WHEY">
+                <div class="item-info">
+                    <p>Протеин<br><span>WHEY</span></p>
+                    <p><span>5000</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+            <div class="item">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/index/creatine.png" alt="Креатин BioTech">
+                <div class="item-info">
+                    <p>Креатин<br><span>BioTech</span></p>
+                    <p><span>12000</span>₽</p>
+                </div>
+                <button class="item__buy-button">В корзину</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/favorite/addToCartButton.js"></script>
+    <script src="assets/js/favorite/deleteItem.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

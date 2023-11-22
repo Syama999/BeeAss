@@ -1,0 +1,95 @@
+main {
+    padding: 40px 83px;
+}
+
+.items__container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: #E5E5E5;
+    box-sizing: border-box;
+    padding: 25px 35px 0 35px;
+    font-weight: 700;
+    font-size: 20px;
+    overflow: hidden;
+
+    transition: .3s ease padding,
+                    .3s ease box-shadow,
+                    .3s ease transform;
+}
+
+.item img {
+    height: 200px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-info p:last-child {
+    margin-top: 23px;
+}
+
+.item:hover {
+    padding: 0px 35px 0px 35px;
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.item__buy-button {
+    position: absolute;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+    font-weight: 700;
+    background-color: #D9D9D9;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+
+    transition: .3s ease bottom,
+                    .3s ease background-color,
+                    .3s ease color;
+}
+
+.item:hover .item__buy-button {
+    bottom: 0;
+}
+
+.item__buy-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.item i {
+    position: absolute;
+    right: 15px;
+    bottom: 100%;
+    cursor: pointer;
+    font-size: 24px;
+
+    transition: .3s ease bottom,
+                    .3s ease transform;
+}
+
+.item:hover .fa-times {
+    bottom: 90%;
+}
+
+.item i:hover {
+    transform: rotate(90deg);
+}

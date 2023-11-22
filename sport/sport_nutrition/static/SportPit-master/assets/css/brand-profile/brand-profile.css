@@ -1,0 +1,230 @@
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+main {
+    padding: 40px 70px;
+}
+
+.brand-info {
+    position: relative;
+    display: flex;
+    column-gap: 10px;
+}
+
+.brand-avatar {
+    position: relative;
+}
+
+.brand-avatar img {
+    height: 300px;
+}
+
+.brand-avatar button {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    background-color: white;
+    font-size: 18px;
+    padding: 2px 23px;
+    color: #727272;
+    cursor: pointer;
+    transition: .3s ease color,
+        .3s ease background-color,
+        .3s ease transform,
+        .3s ease box-shadow;
+    box-shadow: 0 0 3px black;
+}
+
+.brand-avatar button:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+.brand-description {
+    margin-left: 15px;
+}
+
+.brand-description p {
+    width: 260px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.fa-cogs {
+    position: absolute;
+    font-size: 28px;
+    left: 96%;
+    transition: .3s ease color;
+    cursor: pointer;
+}
+
+.fa-cogs:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.add-product {
+    margin-top: calc(40px + 30px);
+}
+
+.add-product h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+}
+
+.product-general-info {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.product-general-info input, .add-product textarea {
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px #0000007b;
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 3px 10px;
+    outline: none;
+    transition: .3s ease box-shadow,
+                    .3s ease transform,
+                    .3s ease background-color;
+}
+
+.product-general-info input:focus {
+    box-shadow: none;
+    transform: translateY(5px);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-general-info input:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-general-info input::placeholder {
+    transition: .3s ease transform;
+}
+
+.product-general-info input:focus::placeholder {
+    transform: translateY(-110%);
+}
+
+.product-general-info input[type="file"] {
+    height: 25px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: transparent;
+    position: relative;
+}
+
+input[type="file"]::file-selector-button {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="file"] + label {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.product-general-info input[type="file"]:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.add-product textarea {
+    margin-top: 20px;
+    resize: none;
+    height: 200px;
+    width: 600px;
+}
+
+.product-preview, .saved-items {
+    margin-top: 40px;
+}
+
+.product-preview h3, .saved-items h3 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+}
+
+.items__container {
+    margin-top: 25px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 240px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.item img {
+    height: 200px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+}
+
+.item__buttons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.product-preview__buttons button {
+    height: 35px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    border-radius: 5px;
+    width: auto;
+    padding: 0 40px;
+    cursor: pointer;
+    font-weight: 700;
+
+    transition: .3s ease transform,
+                    .3s ease box-shadow,
+                    .3s ease background-color;
+}
+
+.product-preview__buttons button:hover {
+    transform: translateY(5px);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
